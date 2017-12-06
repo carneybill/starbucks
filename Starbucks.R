@@ -8,7 +8,7 @@ nyc <- starbucks %>%
   filter(City == "New York") %>%
   select(Brand, Name, Latitude, Longitude)
 
-leaflet() %>% addTiles() %>% setView(-73.983, 40.760, zoom = 12) %>% 
+leaflet() %>% addTiles() %>% setView(-73.983, 40.760, zoom = 14) %>% 
   addMarkers(data = nyc, lat = ~ Latitude, lng = ~ Longitude, icon = , popup = nyc$Name)
 
 head(nyc)
